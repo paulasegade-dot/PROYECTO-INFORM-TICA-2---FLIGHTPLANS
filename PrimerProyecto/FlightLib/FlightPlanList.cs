@@ -48,7 +48,8 @@ namespace FlightLib
                 vector[i].Mover(tiempo);
                 // recorremos todos los FlightPlans de la lista y los movemos
                 i++;
-            } 
+            }
+        }
 
         public void EscribeConsola()
         {
