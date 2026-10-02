@@ -40,10 +40,10 @@ namespace SimuladorDeWindowsForm
         {
         // Botón aceptar
             // Comprobar que ningún campo esté vacío
-            if (txtid1.Text == "" && txtx1.Text == "" && txty1.Text == "" &&
-                txtx1F.Text == "" && txty1F.Text == "" && txtVel1.Text == "" &&
-                txtid2.Text == "" && txtx2.Text == "" && txty2.Text == "" &&
-                txtx2F.Text == "" && txty2F.Text == "" && txtVel2.Text == "")
+            if (txtid1.Text == "" || txtx1.Text == "" || txty1.Text == "" ||
+                txtx1F.Text == "" || txty1F.Text == "" || txtVel1.Text == "" ||
+                txtid2.Text == "" || txtx2.Text == "" || txty2.Text == "" ||
+                txtx2F.Text == "" || txty2F.Text == "" || txtVel2.Text == "")
             {
                 MessageBox.Show("Faltan datos por rellenar.");
             }
@@ -64,6 +64,14 @@ namespace SimuladorDeWindowsForm
                     double xFin2 = Convert.ToDouble(txtx2F.Text);
                     double yFin2 = Convert.ToDouble(txty2F.Text);
                     double vel2 = Convert.ToDouble(txtVel2.Text);
+
+                    if (xIni1 < 0 || xIni1 > 588 || yIni1 < 0 || yIni1 > 388 ||
+                     xFin1 < 0 || xFin1 > 588 || yFin1 < 0 || yFin1 > 388 ||
+                     xIni2 < 0 || xIni2 > 588 || yIni2 < 0 || yIni2 > 388 ||
+                     xFin2 < 0 || xFin2 > 588 || yFin2 < 0 || yFin2 > 388)
+                    {
+                        MessageBox.Show("Las coordenadas deben estar dentro del espacio aéreo.");
+                    }
 
                     // Comprobar que las velocidades sean mayores que cero
                     if (vel1 <= 0 || vel2 <= 0)
@@ -93,6 +101,9 @@ namespace SimuladorDeWindowsForm
             p1 = null;
             p2 = null;
             this.Close();
+        }
+        private void txtid1_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

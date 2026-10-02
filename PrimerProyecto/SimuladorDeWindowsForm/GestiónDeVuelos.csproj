@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormInformacionAvion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformacionAvion.Designer.cs">
+      <DependentUpon>FormInformacionAvion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormParametros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     <Compile Include="FormPlanesDeVuelo.Designer.cs">
       <DependentUpon>FormPlanesDeVuelo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSimulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimulacion.Designer.cs">
+      <DependentUpon>FormSimulacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +78,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormInformacionAvion.resx">
+      <DependentUpon>FormInformacionAvion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormParametros.resx">
       <DependentUpon>FormParametros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPlanesDeVuelo.resx">
       <DependentUpon>FormPlanesDeVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSimulacion.resx">
+      <DependentUpon>FormSimulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

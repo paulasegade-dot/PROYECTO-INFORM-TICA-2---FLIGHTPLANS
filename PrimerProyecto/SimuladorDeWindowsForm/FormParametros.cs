@@ -41,7 +41,7 @@ namespace SimuladorDeWindowsForm
                     double d = Convert.ToDouble(txtDistancia.Text);
                     double t = Convert.ToDouble(txtTiempo.Text);
 
-                    if (d <= 0 && t <= 0)
+                    if (d <= 0 || t <= 0)
                     {
                         MessageBox.Show("Los valores deben ser mayores que 0.");
                     }

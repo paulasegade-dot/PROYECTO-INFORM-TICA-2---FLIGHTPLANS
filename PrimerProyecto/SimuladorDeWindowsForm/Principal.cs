@@ -57,5 +57,22 @@ namespace SimuladorDeWindowsForm
                 MessageBox.Show("Parámetros guardados.");
             }
         }
+
+        private void espacióAerioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (vuelo1 == null || vuelo2 == null)
+            {
+                MessageBox.Show("Primero introduce los planes de vuelo.");
+                return;
+            }
+            if (tiempoCiclo <= 0)
+            {
+                MessageBox.Show("Primero introduce el tiempo del ciclo.");
+                return;
+            }
+
+            FormSimulacion formulario = new FormSimulacion(vuelo1, vuelo2, tiempoCiclo);
+            formulario.ShowDialog();
+        }
     }
 }
